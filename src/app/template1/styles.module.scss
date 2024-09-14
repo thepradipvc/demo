@@ -1,0 +1,152 @@
+@import "../mixins/index.scss";
+
+.template__wrapper {
+  width: 100%;
+  @include flex(column, center, unset);
+  background-color: black;
+  min-height: 100vh;
+}
+
+.user__bg {
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+
+  div {
+    width: 100%;
+    height: 180px;
+  }
+}
+
+.template__content__wrapper {
+  position: relative;
+  @include flex(column, center, flex-start, 1.5rem);
+  flex-wrap: nowrap;
+  max-width: 32rem;
+  background-color: black;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.profile__pic__wrapper {
+  margin-top: -65px;
+
+  div {
+    position: relative;
+    border-radius: 50%;
+    border: 2px solid #e5e5e5;
+    overflow: hidden;
+    height: 100px;
+    width: 100px;
+  }
+}
+
+.bio__wrapper {
+  text-align: center;
+
+  h1 {
+    font-size: 1.25rem /* 20px */;
+    line-height: 2.5rem;
+    color: white;
+  }
+
+  p {
+    font-size: 0.875rem /* 14px */;
+    line-height: 1.25rem /* 20px */;
+    color: #7e7e7e;
+  }
+}
+
+.bio_share_wrapper {
+  @include flex(row, center, space-between, 0.5rem);
+  width: 100%;
+}
+
+.social__links__wrapper {
+  @include flex(row, center, center, 0.75rem);
+  flex-wrap: wrap;
+}
+
+.social__handle {
+  @include flex(row, center, center, 0.5rem);
+  padding: 0.5rem 0.75rem;
+  border-radius: 1rem;
+  background-color: #161616;
+
+  span {
+    background-color: black;
+    height: 24px;
+    width: 24px;
+  }
+
+  p {
+    color: #ffffff;
+  }
+}
+
+.offerings_wrapper {
+  width: 100%;
+  @include flex(column, center, unset, 12px);
+  margin: 20px 0 0 0;
+}
+
+// CARD STYLES
+
+// cardWrapper: styles.card__wrapper,
+// topDiv: styles.top_div,
+// imgWrap: styles.img_wrap,
+// headingWrap: styles.heading_wrap,
+// bottomDiv: styles.bottom_div,
+// button: styles.button,
+// price: styles.price,
+
+.card__wrapper {
+  @include flex(column, center, center, 1rem);
+  color: #7e7e7e;
+  background-color: #161616;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(192, 188, 188, 0.25);
+
+  .top_div {
+    @include flex(row, unset, space-between, 1rem);
+
+    .img_wrap {
+      height: 70px;
+      width: 70px;
+      overflow: hidden;
+      @include flex(row, center, center);
+      border-radius: 10px;
+    }
+
+    .heading_wrap {
+      h4 {
+        color: #ffffff;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .bottom_div {
+    width: 100%;
+
+    @include flex(row, center, center);
+    button {
+      @include flex(row, center, space-between, 0.5rem);
+      background-color: #ffffff;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+      color: #111111;
+      font-weight: 500;
+      border: 1px solid #7e7e7e;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+}
