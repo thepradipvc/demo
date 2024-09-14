@@ -43,6 +43,7 @@ import Upwork from "../../assets/social-Icons/social-icon-upwork.svg";
 import Custom from "../../assets/social-Icons/social-icon-custom.svg";
 import Card from "@/components/Card";
 import styles from "./styles.module.scss";
+import FormCard from "@/components/FormCard";
 
 function Template() {
   const { profile } = profileData;
@@ -55,6 +56,17 @@ function Template() {
     imgWrap: styles.img_wrap,
     headingWrap: styles.heading_wrap,
     bottomDiv: styles.bottom_div,
+    button: styles.button,
+    price: styles.price,
+  };
+
+  const formClasses = {
+    cardWrapper: styles.form__wrapper,
+    topDiv: styles.form_top_div,
+    imgWrap: styles.img_wrap,
+    headingWrap: styles.heading_wrap,
+    middleDiv: styles.form_middle_div,
+    bottomDiv: styles.form_bottom_div,
     button: styles.button,
     price: styles.price,
   };
@@ -170,6 +182,9 @@ function Template() {
           {/* Book 1:1 Call */}
 
           <Card classes={cardClasses} />
+          <FormCard formClasses={formClasses}/>
+          <Card classes={cardClasses} />
+          <FormCard formClasses={formClasses} showNumber={true}/>
         </div>
       </div>
     </div>

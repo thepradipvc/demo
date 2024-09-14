@@ -95,38 +95,28 @@
 
 .offerings_wrapper {
   width: 100%;
-  @include flex(column, center, unset, 12px);
+  @include flex(column, center, unset, 2.5rem);
   margin: 20px 0 0 0;
 }
 
 // CARD STYLES
 
-// cardWrapper: styles.card__wrapper,
-// topDiv: styles.top_div,
-// imgWrap: styles.img_wrap,
-// headingWrap: styles.heading_wrap,
-// bottomDiv: styles.bottom_div,
-// button: styles.button,
-// price: styles.price,
-
 .card__wrapper {
-  @include flex(column, center, center, 1rem);
+  @include flex(column, unset, center, 28px);
   color: #7e7e7e;
   background-color: #161616;
-  border-radius: 1rem;
   padding: 1.2rem;
-  display: flex;
-  flex-direction: column;
   border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(192, 188, 188, 0.25);
+  width: 100%;
 
   .top_div {
-    @include flex(row, unset, space-between, 1rem);
+    @include flex(row, unset, flex-start, 1rem);
 
     .img_wrap {
-      height: 85px;
-      width: 85px;
+      height: 75px;
+      width: 22%;
       overflow: hidden;
       @include flex(row, unset, center);
       border-radius: 4px;
@@ -140,6 +130,7 @@
 
     .heading_wrap {
       line-height: 1.2;
+      width: 72%;
       h4 {
         color: #ffffff;
         font-weight: 500;
@@ -159,13 +150,97 @@
 
     @include flex(row, center, center);
     button {
-      @include flex(row, center, space-between, 0.5rem);
-      background-color: #ffffff;
+      @include flex(row, center, center, 0.5rem);
+      background-color: #027bb5;
       border-radius: 0.5rem;
       padding: 0.5rem 1rem;
       color: #111111;
       font-weight: 500;
-      border: 1px solid #7e7e7e;
+      font-size: 16px;
+      // border: 1px solid #7e7e7e;
+      outline: none;
+      border: 0;
+      color: #fff;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+}
+
+// FORM CARD STYLES
+
+.form__wrapper {
+  @include flex(column, unset, flex-start, 28px);
+  color: #7e7e7e;
+  background-color: #161616;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(192, 188, 188, 0.25);
+  width: 100%;
+
+  .form_top_div {
+    @include flex(row, unset, flex-start, 1rem);
+
+    .img_wrap {
+      height: 85px;
+      width: 22%;
+      overflow: hidden;
+      @include flex(row, unset, center);
+      border-radius: 4px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .heading_wrap {
+      width: 72%;
+      line-height: 1.2;
+      h4 {
+        color: #ffffff;
+        font-weight: 500;
+        margin: 0 0 10px 0;
+      }
+
+      p {
+        color: #7e7e7e;
+        font-weight: 300;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .form_middle_div {
+    @include flex(column, unset, space-between, 1rem);
+    width: 100%;
+    input {
+      padding: 12px;
+      border-radius: 6px;
+      border: 0px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  .form_bottom_div {
+    width: 100%;
+
+    @include flex(row, center, center);
+    button {
+      @include flex(row, center, center, 0.5rem);
+      background-color: #027bb5;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+      color: #111111;
+      font-weight: 500;
+      font-size: 16px;
+      // border: 1px solid #7e7e7e;
+      outline: none;
+      border: 0;
+      color: #fff;
       width: 100%;
       cursor: pointer;
     }

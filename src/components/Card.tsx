@@ -14,7 +14,6 @@ interface Props {
   };
 }
 function Card({ classes }: Props) {
-
   return (
     <div className={classes?.cardWrapper}>
       <div id="top_div" className={classes?.topDiv}>
@@ -37,9 +36,9 @@ function Card({ classes }: Props) {
       </div>
       <div id="bottom_div" className={classes?.bottomDiv}>
         <button>
-          Book Session
+          <p>Book Session</p>
           <span>
-            <IconExternalLink size={22} color="#111111" />
+            <IconExternalLink size={22} color="#fff" />
           </span>
         </button>
       </div>
