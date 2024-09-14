@@ -1,10 +1,14 @@
 @import "../mixins/index.scss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 .template__wrapper {
   width: 100%;
   @include flex(column, center, unset);
   background-color: black;
   min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 .user__bg {
@@ -50,6 +54,7 @@
     font-size: 1.25rem /* 20px */;
     line-height: 2.5rem;
     color: white;
+    font-weight: 500;
   }
 
   p {
@@ -83,6 +88,8 @@
 
   p {
     color: #ffffff;
+    font-weight: 300;
+    font-size: 14px;
   }
 }
 
@@ -107,7 +114,7 @@
   color: #7e7e7e;
   background-color: #161616;
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 1.2rem;
   display: flex;
   flex-direction: column;
   border-radius: 0.5rem;
@@ -118,17 +125,31 @@
     @include flex(row, unset, space-between, 1rem);
 
     .img_wrap {
-      height: 70px;
-      width: 70px;
+      height: 85px;
+      width: 85px;
       overflow: hidden;
-      @include flex(row, center, center);
-      border-radius: 10px;
+      @include flex(row, unset, center);
+      border-radius: 4px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
     }
 
     .heading_wrap {
+      line-height: 1.2;
       h4 {
         color: #ffffff;
         font-weight: 500;
+        margin: 0 0 10px 0;
+      }
+
+      p {
+        color: #7e7e7e;
+        font-weight: 300;
+        font-size: 14px;
       }
     }
   }

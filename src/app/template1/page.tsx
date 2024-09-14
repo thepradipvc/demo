@@ -95,7 +95,7 @@ function Template() {
         </div>
 
         {/* Bio Link and share section */}
-        <div className={styles.bio_share_wrapper}>
+        {/* <div className={styles.bio_share_wrapper}>
           <div className="bg-white rounded-lg cursor-pointer p-[10px] flex items-center justify-center w-[42px]">
             <IconUpload size={22} color="#7e7e7e" />
           </div>
@@ -105,10 +105,10 @@ function Template() {
               <IconCopy size={22} color="#7e7e7e" />
             </span>
           </div>
-          {/* <div className="bg-white rounded-lg cursor-pointer p-[10px] flex items-center justify-center">
+          <div className="bg-white rounded-lg cursor-pointer p-[10px] flex items-center justify-center">
             <IconBell size={22} color="#7e7e7e" />
-          </div> */}
-        </div>
+          </div>
+        </div> */}
 
         {/* Social Links */}
         <div
