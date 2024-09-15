@@ -3,6 +3,7 @@ export const profileData = {
     name: "Lincoln Bayo",
     profile_picture:
       "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=800",
+    profile_picture_two:"https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress",  
     verified: true,
     established_year: "Est. 1999",
     location: "Auckland, NZ",

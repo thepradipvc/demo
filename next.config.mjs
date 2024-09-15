@@ -15,6 +15,14 @@ const nextConfig = {
         protocol: "https", // or http
         hostname: "assets.stanwith.me",
       },
+      {
+        protocol: "https", // or http
+        hostname: "ugc.production.linktr.ee",
+      },
+      {
+        protocol: "https", // or http
+        hostname: "assets.production.linktr.ee",
+      },
     ],
   },
   sassOptions: {
