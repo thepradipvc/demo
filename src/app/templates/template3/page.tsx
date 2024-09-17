@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import { profileData } from "../template1/ProfileData";
+import { profileData } from "../../templates/template1/ProfileData";
 import {
   IconBrandDribbble,
   IconBrandInstagram,
