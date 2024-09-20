@@ -1,0 +1,27 @@
+.description_wrapper {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+
+  width: 90%;
+  margin: 0 auto;
+  font-size: 14px;
+
+  h4 {
+    font-size: 18px;
+    line-height: 2.8;
+  }
+
+  ul {
+    margin: 0 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .description_wrapper {
+    font-size: 16px;
+
+    h4 {
+      font-size: 20px;
+    }
+  }
+}
