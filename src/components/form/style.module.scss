@@ -1,0 +1,15 @@
+.form__wrapper {
+  width: 90%;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  input {
+    height: 100%;
+    border-radius: 8px;
+    border: 1px solid #a0a096;
+    padding: 12px;
+    font-size: 14px;
+  }
+}
