@@ -5,6 +5,7 @@ import styles from './style.module.scss'
 import CalendarComponent from "@/components/calendar";
 import 'react-calendar/dist/Calendar.css';
 import Form from "@/components/form/index";
+import Faq from "@/components/faq";
 
 function SessionBooking() {
   return (
@@ -17,6 +18,7 @@ function SessionBooking() {
       ></link>
       <HeaderImage />
       <Description />
+      <Faq/>
       <CalendarComponent/>
       <Form/>
     </div>
