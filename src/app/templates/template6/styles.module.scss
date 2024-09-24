@@ -1,0 +1,233 @@
+@import "../../../mixins/index.scss";
+@import url("https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap");
+
+.template__wrapper {
+  font-family: "Crete Round", serif !important;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  @include flex(column, center, center);
+  position: relative;
+  background-color: #201e1e;
+}
+
+.template__content__wrapper {
+  margin-top: 50px;
+  padding: 1.5rem;
+  z-index: 10;
+}
+
+.profile_parent {
+  @include flex(column, center, unset, 1.5rem);
+  text-align: center;
+}
+
+.profile__pic__wrapper {
+  @include flex(row, center, center, 0);
+
+  div {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    // border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.bio__wrapper {
+  text-align: center;
+
+  h1 {
+    font-size: 24px;
+    line-height: 2.5rem;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+  }
+
+  p {
+    font-size: 0.875rem /* 14px */;
+    line-height: 1.25rem /* 20px */;
+  }
+}
+
+.social__links__wrapper {
+  @include flex(row, center, center, 24px);
+  row-gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.social__handle {
+  @include flex(row, center, center, 0.5rem);
+
+  span {
+    svg {
+      height: 26px;
+      width: 26px;
+    }
+  }
+}
+
+.offerings_wrapper {
+  width: 100%;
+  @include flex(column, center, unset, 2.5rem);
+  margin: 20px 0 0 0;
+}
+
+// CARD STYLES
+
+.card__wrapper {
+  @include flex(column, unset, center, 28px);
+  //   background-color: #f86138;
+  padding: 1.2rem;
+  overflow: hidden;
+  width: 100%;
+
+
+  .top_div {
+    @include flex(row, unset, flex-start, 1rem);
+
+    .img_wrap {
+      height: 75px;
+      width: 22%;
+      overflow: hidden;
+      @include flex(row, unset, center);
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .heading_wrap {
+      line-height: 1.2;
+      width: 72%;
+      h4 {
+        font-weight: 500;
+        margin: 0 0 10px 0;
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .bottom_div {
+    width: 100%;
+
+    @include flex(row, center, center);
+    button {
+      @include flex(row, center, center, 0.5rem);
+      background-color: #ffffff;
+      padding: 0.5rem 1rem;
+      font-weight: 500;
+      font-size: 16px;
+      // border: 1px solid #7e7e7e;
+      outline: none;
+      border: 0;
+      color: #fff;
+      width: 100%;
+      cursor: pointer;
+
+      span {
+        svg {
+          stroke: #111111 !important;
+        }
+      }
+
+      p {
+        font-weight: 600;
+        color: #111111;
+        font-family: "Poppins", sans-serif;
+      }
+    }
+  }
+}
+
+// FORM CARD STYLES
+
+.form__wrapper {
+  @include flex(column, unset, flex-start, 28px);
+  padding: 1.2rem;
+  overflow: hidden;
+  width: 100%;
+
+  .form_top_div {
+    @include flex(row, unset, flex-start, 1rem);
+
+    .img_wrap {
+      height: 85px;
+      width: 22%;
+      overflow: hidden;
+      @include flex(row, unset, center);
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .heading_wrap {
+      width: 72%;
+      line-height: 1.2;
+      h4 {
+        font-weight: 500;
+        margin: 0 0 10px 0;
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .form_middle_div {
+    @include flex(column, unset, space-between, 1rem);
+    width: 100%;
+    input {
+      padding: 12px;
+      border: 0px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  .form_bottom_div {
+    width: 100%;
+
+    @include flex(row, center, center);
+    button {
+      @include flex(row, center, center, 0.5rem);
+      background-color: #fff;
+      padding: 0.5rem 1rem;
+      font-weight: 500;
+      font-size: 16px;
+      outline: none;
+      border: 0;
+      width: 100%;
+      cursor: pointer;
+
+      span {
+        svg {
+          stroke: #111111 !important;
+        }
+      }
+
+      p {
+        font-weight: 600;
+        color: #111111;
+        font-family: "Poppins", sans-serif;
+      }
+    }
+  }
+}

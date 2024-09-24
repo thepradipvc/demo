@@ -1,0 +1,242 @@
+@import "../../../mixins/index.scss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+.template__wrapper {
+  font-family: "Inter", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-attachment: fixed;
+  @include flex(column, center, center);
+  position: relative;
+  color: #fff !important;
+
+  button,
+  input {
+    font-family: "Inter", sans-serif !important;
+  }
+}
+
+.template__content__wrapper {
+  margin-top: 50px;
+  padding: 1.5rem;
+  z-index: 10;
+}
+
+.profile__pic__wrapper {
+  @include flex(row, center, center, 0);
+
+  div {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50px;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.bio__wrapper {
+  text-align: center;
+  margin: 12px 0;
+  color: #ececec;
+
+  h1 {
+    font-size: 22px;
+    line-height: 2.5rem;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.25rem;
+    font-size: 500;
+  }
+}
+
+.social__links__wrapper {
+  @include flex(row, center, center, 1.5rem);
+  flex-wrap: wrap;
+  row-gap: 10px;
+  margin: 20px 0;
+}
+
+.social__handle {
+  @include flex(row, center, center, 0.5rem);
+
+  span {
+    svg {
+      height: 28px;
+      width: 28px;
+    }
+  }
+}
+
+.offerings_wrapper {
+  width: 100%;
+  @include flex(column, center, unset, 2.5rem);
+  margin: 20px 0 0 0;
+}
+
+// CARD STYLES
+
+.card__wrapper {
+  @include flex(column, unset, center, 28px);
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+
+  .top_div {
+    @include flex(row, unset, flex-start, 1rem);
+
+    .img_wrap {
+      height: 75px;
+      width: 22%;
+      overflow: hidden;
+      @include flex(row, unset, center);
+      border-radius: 4px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .heading_wrap {
+      line-height: 1.2;
+      width: 72%;
+      h4 {
+        font-weight: 500;
+        margin: 0 0 10px 0;
+      }
+
+      p {
+        font-weight: 300;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .bottom_div {
+    width: 100%;
+
+    @include flex(row, center, center);
+    button {
+      @include flex(row, center, space-between, 0.5rem);
+      background-color: #027bb5;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-weight: 500;
+      font-size: 16px;
+      outline: none;
+      border: 0;
+
+      width: 100%;
+      cursor: pointer;
+
+      span {
+        svg {
+          stroke: #fff !important;
+        }
+      }
+
+      p {
+        color: #fff;
+      }
+    }
+  }
+}
+
+// FORM CARD STYLES
+
+.form__wrapper {
+  @include flex(column, unset, flex-start, 28px);
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: 100%;
+
+  .form_top_div {
+    @include flex(row, unset, flex-start, 1rem);
+
+    .img_wrap {
+      height: 85px;
+      width: 22%;
+      overflow: hidden;
+      @include flex(row, unset, center);
+      border-radius: 4px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .heading_wrap {
+      width: 72%;
+      line-height: 1.2;
+      h4 {
+        font-weight: 500;
+        margin: 0 0 10px 0;
+      }
+
+      p {
+        font-weight: 300;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .form_middle_div {
+    @include flex(column, unset, space-between, 1rem);
+    width: 100%;
+    input {
+      padding: 12px;
+      border-radius: 6px;
+      border: 0px;
+      font-size: 14px;
+      font-weight: 500;
+      background-color: #ececec;
+    }
+  }
+
+  .form_bottom_div {
+    width: 100%;
+
+    @include flex(row, center, center);
+    button {
+      @include flex(row, center, space-between, 0.5rem);
+      background-color: #027bb5;
+
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-weight: 500;
+      font-size: 16px;
+      outline: none;
+      border: 0;
+      width: 100%;
+
+      cursor: pointer;
+
+      span {
+        svg {
+          stroke: #fff !important;
+        }
+      }
+
+      p {
+        color: #fff;
+      }
+    }
+  }
+}
