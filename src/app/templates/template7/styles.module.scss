@@ -1,21 +1,18 @@
 @import "../../../mixins/index.scss";
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
 
 .template__wrapper {
-  font-family: "Inter", sans-serif !important;
-  font-optical-sizing: auto;
+  font-family: "Gowun Batang", serif;
   font-weight: 400;
   font-style: normal;
-  background-attachment: fixed;
+  color: #fff;
   @include flex(column, center, center);
   position: relative;
-  color: #000;
 
   button,
   input {
-    font-family: "Inter", sans-serif !important;
+    font-family: "Gowun Batang", serif;
   }
-  z-index: 99;
 }
 
 .template__content__wrapper {
@@ -24,14 +21,18 @@
   z-index: 10;
 }
 
+.profile_parent {
+  @include flex(column, center, unset, 1.5rem);
+  text-align: center;
+}
+
 .profile__pic__wrapper {
   @include flex(row, center, center, 0);
 
   div {
     position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50px;
+    width: 120px;
+    height: 120px;
     overflow: hidden;
 
     img {
@@ -43,26 +44,25 @@
 
 .bio__wrapper {
   text-align: center;
-  margin: 12px 0;
-  color: #fff;
 
   h1 {
-    font-size: 22px;
+    font-size: 24px;
     line-height: 2.5rem;
     font-weight: 500;
+    margin: 0 0 10px 0;
   }
 
   p {
-    font-size: 14px;
-    line-height: 1.25rem;
-    font-size: 500;
+    font-size: 0.875rem /* 14px */;
+    line-height: 1.25rem /* 20px */;
+    color: #e5e5e5;
   }
 }
 
 .social__links__wrapper {
-  @include flex(row, center, center, 1.5rem);
-  flex-wrap: wrap;
+  @include flex(row, center, center, 24px);
   row-gap: 10px;
+  flex-wrap: wrap;
   margin: 20px 0;
 }
 
@@ -71,9 +71,8 @@
 
   span {
     svg {
-      height: 28px;
-      width: 28px;
-      color: #fff;
+      height: 26px;
+      width: 26px;
     }
   }
 }
@@ -88,12 +87,11 @@
 
 .card__wrapper {
   @include flex(column, unset, center, 28px);
-  background-color: rgba(255, 255, 255, 0.99);
+  background-color: #fff;
   padding: 1.2rem;
-  border-radius: 0.5rem;
   overflow: hidden;
   width: 100%;
-  position: relative;
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
 
   .top_div {
     @include flex(row, unset, flex-start, 1rem);
@@ -103,7 +101,6 @@
       width: 22%;
       overflow: hidden;
       @include flex(row, unset, center);
-      border-radius: 4px;
 
       img {
         height: 100%;
@@ -115,13 +112,14 @@
     .heading_wrap {
       line-height: 1.2;
       width: 72%;
+      color: black;
       h4 {
         font-weight: 500;
         margin: 0 0 10px 0;
       }
 
       p {
-        font-weight: 300;
+        font-weight: 500;
         font-size: 14px;
       }
     }
@@ -132,15 +130,15 @@
 
     @include flex(row, center, center);
     button {
-      @include flex(row, center, space-between, 0.5rem);
-      background-color: #027bb5;
-      border-radius: 0.5rem;
+      @include flex(row, center, center, 0.5rem);
+      background-color: #333;
       padding: 0.5rem 1rem;
-      font-weight: 500;
+      font-weight: 400;
       font-size: 16px;
+      // border: 1px solid #7e7e7e;
       outline: none;
       border: 0;
-
+      color: #fff;
       width: 100%;
       cursor: pointer;
 
@@ -151,6 +149,7 @@
       }
 
       p {
+        font-weight: 600;
         color: #fff;
       }
     }
@@ -161,11 +160,12 @@
 
 .form__wrapper {
   @include flex(column, unset, flex-start, 28px);
-  background-color: rgba(255, 255, 255, 0.99);
   padding: 1.2rem;
-  border-radius: 0.5rem;
   overflow: hidden;
+  background-color: #fff;
+  color: #000;
   width: 100%;
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
 
   .form_top_div {
     @include flex(row, unset, flex-start, 1rem);
@@ -175,7 +175,6 @@
       width: 22%;
       overflow: hidden;
       @include flex(row, unset, center);
-      border-radius: 4px;
 
       img {
         height: 100%;
@@ -193,7 +192,7 @@
       }
 
       p {
-        font-weight: 300;
+        font-weight: 500;
         font-size: 14px;
       }
     }
@@ -204,11 +203,9 @@
     width: 100%;
     input {
       padding: 12px;
-      border-radius: 6px;
       border: 0px;
       font-size: 14px;
       font-weight: 500;
-      background-color: #ececec;
     }
   }
 
@@ -217,17 +214,14 @@
 
     @include flex(row, center, center);
     button {
-      @include flex(row, center, space-between, 0.5rem);
-      background-color: #027bb5;
-
-      border-radius: 0.5rem;
+      @include flex(row, center, center, 0.5rem);
+      background-color: #333;
       padding: 0.5rem 1rem;
       font-weight: 500;
       font-size: 16px;
       outline: none;
       border: 0;
       width: 100%;
-
       cursor: pointer;
 
       span {
@@ -237,6 +231,7 @@
       }
 
       p {
+        font-weight: 600;
         color: #fff;
       }
     }
