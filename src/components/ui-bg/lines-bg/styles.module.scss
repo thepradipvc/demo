@@ -1,0 +1,66 @@
+.lines__wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .svgElement {
+      height: 100%;
+      width: 100%;
+  
+      .home {
+        clip-path: url(#cache);
+      }
+  
+      .red {
+        fill: none;
+        opacity: 0.15;
+        stroke: #ce1b5f;
+        stroke-width: 12;
+        stroke-miterlimit: 10;
+        animation: show 4s ease-in-out infinite;
+        animation-fill-mode: forwards;
+      }
+  
+      .blue {
+        fill: none;
+        opacity: 0.15;
+        stroke: #06a1c4;
+        stroke-width: 12;
+        stroke-miterlimit: 10;
+        animation: show 4s ease-in-out infinite;
+        animation-fill-mode: forwards;
+      }
+  
+      .light_blue {
+        fill: none;
+        opacity: 0.15;
+        stroke: #06a1c4;
+        stroke-width: 6;
+        stroke-miterlimit: 10;
+        stroke-dasharray: 200;
+        stroke-dashoffset: 800;
+        animation: draw 4s ease-in-out infinite;
+        animation-fill-mode: forwards;
+      }
+  
+      @keyframes draw {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+  
+      @keyframes show {
+        0% {
+          opacity: 0.15;
+        }
+        50% {
+          opacity: 0.2;
+        }
+        100% {
+          opacity: 0.15;
+        }
+      }
+    }
+  }
+  
