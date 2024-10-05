@@ -1,4 +1,4 @@
-// process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 export const getData = async (profile: string) => {
   const res = await fetch(`https://dev.lnkr.store/api/v1/profile/${profile}`, {
     // Revalidate cache for fresh data in case of ISR/SSG
