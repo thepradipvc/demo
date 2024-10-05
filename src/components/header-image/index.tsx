@@ -1,13 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import styles from './styles.module.scss'
+import styles from "./styles.module.scss";
 
-function HeaderImage() {
-  let URL =
-    "https://assets.stanwith.me/live/msc/38008/56unl/lumencreativeco6.jpg/webp/0x433/100/lumencreativeco6.webp?width=500";
+interface Props {
+  imgUrl: string;
+}
+
+function HeaderImage({ imgUrl }: Props) {
   return (
     <div className={styles.header_image}>
-      <Image src={URL} alt="HeaderImage" fill />
+      <Image src={imgUrl} alt="HeaderImage" fill />
     </div>
   );
 }

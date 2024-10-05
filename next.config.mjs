@@ -23,6 +23,10 @@ const nextConfig = {
         protocol: "https", // or http
         hostname: "assets.production.linktr.ee",
       },
+      {
+        protocol: "https", // or http
+        hostname: "devlnkr.s3.amazonaws.com",
+      },
     ],
   },
   sassOptions: {
