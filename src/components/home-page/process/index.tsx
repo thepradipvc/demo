@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import TemplateImg from "../../../assets/home-page/template.png";
+import TemplateImg from "../../../assets/home-page/template3.png";
 import DashboardImg from "../../../assets/home-page/dashboard.png";
 
 function index() {
