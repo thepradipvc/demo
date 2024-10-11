@@ -8,16 +8,6 @@ import { getIcons } from "@/helpers/icons";
 function Template({ profile }: any) {
   const social_links = profile?.links;
 
-  const cardClasses = {
-    cardWrapper: styles.card__wrapper,
-    topDiv: styles.top_div,
-    imgWrap: styles.img_wrap,
-    headingWrap: styles.heading_wrap,
-    bottomDiv: styles.bottom_div,
-    button: styles.button,
-    price: styles.price,
-  };
-
   const formClasses = {
     cardWrapper: styles.form__wrapper,
     topDiv: styles.form_top_div,

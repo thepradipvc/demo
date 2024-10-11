@@ -30,3 +30,23 @@ export const getProductData = async (productId: string) => {
 
   return res.json(); // Fetch will automatically convert it to JSON
 };
+
+export const getSlotsData = async (
+  username: string,
+  date: string,
+  productId: string
+) => {
+  const res = await fetch(
+    `https://dev.lnkr.store/api/v1/products/${username}/${productId}/availability?date=${date}`,
+    {
+      // Revalidate cache for fresh data in case of ISR/SSG
+      next: { revalidate: 10 },
+    }
+  );
+
+  if (!res.ok) {
+    throw new Error(`Failed to fetch data: ${res.status}`);
+  }
+
+  return res.json(); // Fetch will automatically convert it to JSON
+};

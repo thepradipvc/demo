@@ -72,11 +72,13 @@
 
 .social__handle {
   @include flex(row, center, center, 0.5rem);
+  text-decoration: none;
 
   span {
     svg {
       height: 28px;
       width: 28px;
+      color: #fff;
     }
   }
 }
@@ -85,81 +87,6 @@
   width: 100%;
   @include flex(column, center, unset, 2.5rem);
   margin: 20px 0 0 0;
-}
-
-// CARD STYLES
-
-.card__wrapper {
-  @include flex(column, unset, center, 28px);
-  background-color: rgba(0, 0, 0, 0.35);
-  padding: 1.2rem;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  width: 100%;
-
-  .top_div {
-    @include flex(row, unset, flex-start, 1rem);
-
-    .img_wrap {
-      height: 75px;
-      width: 22%;
-      overflow: hidden;
-      @include flex(row, unset, center);
-      border-radius: 4px;
-
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-
-    .heading_wrap {
-      line-height: 1.2;
-      width: 72%;
-      h4 {
-        color: #ffffff;
-        font-weight: 500;
-        margin: 0 0 10px 0;
-      }
-
-      p {
-        font-weight: 300;
-        font-size: 14px;
-      }
-    }
-  }
-
-  .bottom_div {
-    width: 100%;
-
-    @include flex(row, center, center);
-    button {
-      @include flex(row, center, center, 0.5rem);
-      background-color: #027bb5;
-      background-color: #ffffff;
-      border-radius: 0.5rem;
-      padding: 0.5rem 1rem;
-      font-weight: 500;
-      font-size: 16px;
-      // border: 1px solid #7e7e7e;
-      outline: none;
-      border: 0;
-      color: #fff;
-      width: 100%;
-      cursor: pointer;
-
-      span {
-        svg {
-          stroke: #111111 !important;
-        }
-      }
-
-      p {
-        color: #111111;
-      }
-    }
-  }
 }
 
 // FORM CARD STYLES
@@ -231,6 +158,7 @@
       outline: none;
       border: 0;
       width: 100%;
+      color: #fff;
       cursor: pointer;
 
       span {

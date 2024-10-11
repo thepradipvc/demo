@@ -11,8 +11,11 @@
     line-height: 2.8;
   }
 
-  ul {
-    margin: 0 1rem;
+  .description_content {
+    ul,
+    ol {
+      margin: 0 0 0 1rem;
+    }
   }
 }
 

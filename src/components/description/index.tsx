@@ -1,4 +1,6 @@
+import React from "react";
 import styles from "./styles.module.scss";
+import ReactMarkdown from "react-markdown";
 
 interface DescriptionProps {
   description: string;
@@ -18,7 +20,7 @@ function Description({
       <h1>{heading}</h1>
       <h4>$999 </h4>
       <div className={styles.description_content}>
-        <p dangerouslySetInnerHTML={{ __html: description }} />
+        <ReactMarkdown>{description}</ReactMarkdown>
       </div>
     </div>
   );
