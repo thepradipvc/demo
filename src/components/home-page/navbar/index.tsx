@@ -3,18 +3,7 @@ import Container from "../container/index"; // Replace with your React container
 import Link from "next/link"; // Use Next.js' built-in Link component
 import { useState } from "react";
 
-// Dummy menu items data
-const menuitems = [
-  { title: "Home", path: "/" },
-  { title: "About", path: "/about" },
-  {
-    title: "Services",
-    children: [
-      { title: "Web Development", path: "/services/web-dev" },
-      { title: "App Development", path: "/services/app-dev" },
-    ],
-  },
-];
+
 
 const Dropdown = ({ title, children }: any) => {
   const [open, setOpen] = useState(false);
@@ -54,14 +43,14 @@ const Navbar = () => {
           <a href="/" className="text-lg font-bold text-slate-800">
             .Lnkr <span className="text-slate-500">Store</span>
           </a>
-          <div className="lg:hidden">
+          {/* <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="w-4 h-4 text-gray-800"
             >
-              {/* Use a proper icon like hamburger */}☰
+             ☰
             </button>
-          </div>
+          </div> */}
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">

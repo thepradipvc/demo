@@ -1,21 +1,35 @@
 import React from "react";
-import './globals.scss';
-import Navbar from '../components/home-page/navbar/index';
+import "./globals.scss";
+import Navbar from "../components/home-page/navbar/index";
 // import Footer from '@components/footer';
-// import Navbar from '@components/navbar/navbar';
-// import '@fontsource-variable/inter/index.css';
-// import '@fontsource-variable/bricolage-grotesque';
-// import { Helmet } from 'react-helmet';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html>
-      <body>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin={true}
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body
+        style={{
+          fontFamily: "Bricolage Grotesque",
+          fontOpticalSizing: "auto",
+          fontWeight: 200,
+          fontStyle: "normal",
+        }}
+      >
         <Navbar />
         {children}
         {/* <Footer /> */}
       </body>
     </html>
   );
-};
-
+}
