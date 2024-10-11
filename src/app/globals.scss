@@ -8,6 +8,17 @@
   box-sizing: border-box;
 }
 
+.slick-track
+{
+    display: flex !important;
+    height: 500px;
+}
+
+.slick-slide
+{
+    height: inherit !important;
+}
+
 .react-calendar {
   border-radius: 16px;
   width: 90% !important;
