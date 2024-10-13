@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const CallToAction = () => {
   return (
-    <div className="bg-black p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center">
+    <div className="bg-black p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center mb-10">
       <h2 className="text-white text-4xl md:text-6xl tracking-tight">
        Claim your free shareable link now.
       </h2>
