@@ -88,9 +88,13 @@ function index() {
           </Slider>
         </div>
 
-        <button className="btn btn-primary mt-8 m-auto bg-black text-white py-4 px-6 rounded-xl font-bold">
+        <a
+          href="https://app.lnkr.store"
+          className="btn btn-primary mt-8 bg-black text-white py-4 px-6 rounded-xl font-bold text-center w-max m-auto"
+          rel="noopener"
+        >
           Create Profile Now
-        </button>
+        </a>
       </div>
     </>
   );
