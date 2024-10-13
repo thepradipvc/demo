@@ -7,6 +7,10 @@ export default async function ProfilePage({
 }: {
   params: { profile: string };
 }) {
-  let profile = await getData(params?.profile);
-  return <div>{renderTemplates(profile)}</div>;
+  let excluded_routes = ["refund-policy"];
+
+  if (!excluded_routes?.includes(params?.profile)) {
+    let profile = await getData(params?.profile);
+    return <div>{renderTemplates(profile)}</div>;
+  }
 }

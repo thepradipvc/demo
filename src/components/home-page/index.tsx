@@ -7,6 +7,7 @@ import CTA from "./cta";
 import Transform from "./transform";
 import Features from "./features";
 import Slider from '../carousel/index'
+import Footer from "./footer";
 import Navbar from "./navbar";
 
 function index() {
@@ -19,6 +20,7 @@ function index() {
         {/* <Process /> */}
         <Features/>
         <CTA />
+        <Footer/>
       </Container>
       <Transform />
     </>
