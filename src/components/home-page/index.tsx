@@ -7,11 +7,13 @@ import CTA from "./cta";
 import Transform from "./transform";
 import Features from "./features";
 import Slider from '../carousel/index'
+import Navbar from "./navbar";
 
 function index() {
   return (
     <>
       <Container>
+        <Navbar/>
         <Hero />
         <Slider/>
         {/* <Process /> */}

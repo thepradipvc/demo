@@ -1,7 +1,5 @@
 import React from "react";
 import "./globals.scss";
-import Navbar from "../components/home-page/navbar/index";
-// import Footer from '@components/footer';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -27,7 +25,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           fontStyle: "normal",
         }}
       >
-        <Navbar />
         {children}
         {/* <Footer /> */}
       </body>
