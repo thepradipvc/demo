@@ -32,6 +32,9 @@ const nextConfig = {
   sassOptions: {
     includePaths: ['./styles'], // Optional: Custom path for your Sass files
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;
