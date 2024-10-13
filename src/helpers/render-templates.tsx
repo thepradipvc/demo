@@ -56,6 +56,6 @@ export const renderTemplates = (profile: any) => {
       return <Template14 profile={profile} />;
 
     default:
-      return <h1>PROFILE</h1>; // or return a fallback component, error, or null
+      return <Template2 profile={profile} />;; // or return a fallback component, error, or null
   }
 };
