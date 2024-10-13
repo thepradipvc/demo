@@ -10,6 +10,7 @@
   @include flex(column, center, center);
   position: relative;
   color: #000 !important;
+  padding-bottom: 100px;
 
   button,
   input {

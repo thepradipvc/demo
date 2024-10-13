@@ -9,6 +9,7 @@
   color: #fff;
   @include flex(column, center, center);
   position: relative;
+  padding-bottom: 100px;
 
   button,
   input {
