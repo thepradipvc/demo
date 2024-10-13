@@ -18,7 +18,7 @@ function index() {
     slidesToShow: 3,
     slidesToScroll: 1,
     showArrows: false,
-    // autoplay: true,
+    autoplay: true,
     speed: 2000,
     responsive: [
       {
