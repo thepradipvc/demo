@@ -16,6 +16,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
           rel="stylesheet"
         />
+        <title>Lnkr.store</title>
+        <meta name="description" content="A perfect link on bio solution" />
       </head>
       <body
         style={{
