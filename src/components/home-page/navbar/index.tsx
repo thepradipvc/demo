@@ -41,7 +41,7 @@ const Navbar = () => {
       <header className="flex flex-col lg:flex-row justify-between items-center my-5">
         <nav className="w-full lg:w-auto flex items-center justify-between">
           <a href="https://app.lnkr.store/" className="text-lg font-bold text-slate-800">
-            .Lnkr <span className="text-slate-500">Store</span>
+            Lnkr. <span className="text-slate-500">Store</span>
           </a>
 
         </nav>

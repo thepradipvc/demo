@@ -15,7 +15,7 @@ function index() {
       </div>
       <div>
         <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-          Building digital products & brands with .Lnkr
+          Building digital products & brands with Lnkr.store
         </h1>
         <p className="text-lg mt-4 text-slate-600 max-w-xl">
           Lnkr provides a complete solution for creators, entrepreneurs &
