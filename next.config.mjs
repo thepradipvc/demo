@@ -27,6 +27,10 @@ const nextConfig = {
         protocol: "https", // or http
         hostname: "devlnkr.s3.amazonaws.com",
       },
+      {
+        protocol: "https", // or http
+        hostname: "lh3.googleusercontent.com",
+      },
     ],
   },
   sassOptions: {
