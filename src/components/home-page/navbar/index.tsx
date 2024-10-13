@@ -40,27 +40,19 @@ const Navbar = () => {
     <Container>
       <header className="flex flex-col lg:flex-row justify-between items-center my-5">
         <nav className="w-full lg:w-auto flex items-center justify-between">
-          <a href="/" className="text-lg font-bold text-slate-800">
+          <a href="https://app.lnkr.store/" className="text-lg font-bold text-slate-800">
             .Lnkr <span className="text-slate-500">Store</span>
           </a>
-          {/* <div className="lg:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="w-4 h-4 text-gray-800"
-            >
-             ☰
-            </button>
-          </div> */}
+
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
-          <Link
-            href="https://app.lnkr.store"
-            passHref
-            className="text-md text-gray-800 hover:text-gray-900"
+          <a
+            href="https://app.lnkr.store/"
+            className="btn btn-primary mt-8 bg-black text-white py-4 px-6 rounded-xl font-bold"
           >
             Get Started
-          </Link>
+          </a>
         </div>
       </header>
     </Container>

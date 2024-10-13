@@ -23,12 +23,13 @@ function index() {
           offer services like coaching or courses.
         </p>
         <div className="mt-6 flex flex-col sm:flex-row gap-3">
-          <button
+          <a
+            href="https://app.lnkr.store"
             className="btn btn-primary mt-8 bg-black text-white py-4 px-6 rounded-xl font-bold"
             rel="noopener"
           >
-            Get Started Now
-          </button>
+            Launch Now
+          </a>
         </div>
       </div>
     </main>

@@ -10,13 +10,12 @@ const CallToAction = () => {
         {/* Optional content can be added here */}
       </p>
       <div className="flex mt-5">
-        <Link
+        <a
           href="https://app.lnkr.store"
-          passHref
           className="bg-white text-black px-5 py-2 rounded-lg hover:bg-gray-200 font-bold"
         >
           Get Started
-        </Link>
+        </a>
       </div>
     </div>
   );
