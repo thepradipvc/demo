@@ -6,6 +6,8 @@ import { Link, Product } from "@/types";
 import { getIcons } from "@/helpers/icons";
 
 function Template({ profile }: any) {
+  console.log(profile);
+  
   const social_links = profile?.links;
 
   const formClasses = {

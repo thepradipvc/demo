@@ -1,16 +1,6 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import {
-  IconBrandDribbble,
-  IconBrandInstagram,
-  IconBrandLinkedin,
-  IconBrandPinterest,
-  IconBrandSnapchat,
-  IconBrandSpotify,
-  IconBrandYoutube,
-} from "@tabler/icons-react";
 import Image from "next/image";
-import Card from "@/components/Card";
 import FormCard from "@/components/FormCard";
 import { Link, Product } from "@/types";
 import { getIcons } from "@/helpers/icons";
@@ -117,6 +107,7 @@ function TemplateThree({ profile }: any) {
             <div
               style={{
                 background: getRandomColor(),
+                width:'100%'
               }}
             >
               <FormCard

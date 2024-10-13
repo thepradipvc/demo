@@ -117,7 +117,8 @@
 
     .img_wrap {
       height: 85px;
-      width: 22%;
+      width: 85px;
+      flex-shrink: 0;
       overflow: hidden;
       @include flex(row, unset, center);
       border-radius: 4px;
@@ -130,7 +131,7 @@
     }
 
     .heading_wrap {
-      width: 72%;
+      width: 100%;
       line-height: 1.2;
       h4 {
         color: #ffffff;

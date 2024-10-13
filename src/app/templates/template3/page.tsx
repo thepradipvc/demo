@@ -92,46 +92,12 @@ function TemplateThree({ profile }: any) {
           ))}
         </div>
 
-        {/* // Creator Offerings // */}
-        {/* <div className={styles.offerings_wrapper}>
-
-          <div
-            style={{
-              backgroundColor: getRandomColor(),
-            }}
-          >
-            <Card classes={cardClasses} />
-          </div>
-          <div
-            style={{
-              backgroundColor: getRandomColor(),
-            }}
-          >
-            <FormCard formClasses={formClasses} />
-          </div>
-          <div
-            style={{
-              backgroundColor: getRandomColor(),
-            }}
-          >
-            <Card classes={cardClasses} />
-          </div>
-          <div
-            style={{
-              backgroundColor: getRandomColor(),
-            }}
-          >
-            <FormCard formClasses={formClasses} />
-          </div>
-        </div> */}
-
         <div className={styles.offerings_wrapper}>
-          {/* Book 1:1 Call */}
-
           {profile?.products?.map((product: Product) => (
             <div
               style={{
                 backgroundColor: getRandomColor(),
+                width:'100%'
               }}
             >
               <FormCard

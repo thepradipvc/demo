@@ -84,79 +84,6 @@
   margin: 20px 0 0 0;
 }
 
-// CARD STYLES
-
-.card__wrapper {
-  @include flex(column, unset, center, 28px);
-  background-color: rgba(255, 255, 255, 0.99);
-  padding: 1.2rem;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-
-  .top_div {
-    @include flex(row, unset, flex-start, 1rem);
-
-    .img_wrap {
-      height: 75px;
-      width: 22%;
-      overflow: hidden;
-      @include flex(row, unset, center);
-      border-radius: 4px;
-
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-
-    .heading_wrap {
-      line-height: 1.2;
-      width: 72%;
-      h4 {
-        font-weight: 500;
-        margin: 0 0 10px 0;
-      }
-
-      p {
-        font-weight: 300;
-        font-size: 14px;
-      }
-    }
-  }
-
-  .bottom_div {
-    width: 100%;
-
-    @include flex(row, center, center);
-    button {
-      @include flex(row, center, space-between, 0.5rem);
-      background-color: #027bb5;
-      border-radius: 0.5rem;
-      padding: 0.5rem 1rem;
-      font-weight: 500;
-      font-size: 16px;
-      outline: none;
-      border: 0;
-
-      width: 100%;
-      cursor: pointer;
-
-      span {
-        svg {
-          stroke: #fff !important;
-        }
-      }
-
-      p {
-        color: #fff;
-      }
-    }
-  }
-}
-
 // FORM CARD STYLES
 
 .form__wrapper {
@@ -172,7 +99,8 @@
 
     .img_wrap {
       height: 85px;
-      width: 22%;
+      width: 85px;
+      flex-shrink: 0;
       overflow: hidden;
       @include flex(row, unset, center);
       border-radius: 4px;
@@ -185,7 +113,7 @@
     }
 
     .heading_wrap {
-      width: 72%;
+      width: 100%;
       line-height: 1.2;
       h4 {
         font-weight: 500;

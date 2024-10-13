@@ -9,6 +9,11 @@
   @include flex(column, center, center);
   position: relative;
   background-color: #201e1e;
+
+  button,
+  input {
+    font-family: "Crete Round", serif !important;
+  }
 }
 
 .template__content__wrapper {
@@ -79,79 +84,6 @@
   margin: 20px 0 0 0;
 }
 
-// CARD STYLES
-
-.card__wrapper {
-  @include flex(column, unset, center, 28px);
-  //   background-color: #f86138;
-  padding: 1.2rem;
-  overflow: hidden;
-  width: 100%;
-
-
-  .top_div {
-    @include flex(row, unset, flex-start, 1rem);
-
-    .img_wrap {
-      height: 75px;
-      width: 22%;
-      overflow: hidden;
-      @include flex(row, unset, center);
-
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-
-    .heading_wrap {
-      line-height: 1.2;
-      width: 72%;
-      h4 {
-        font-weight: 500;
-        margin: 0 0 10px 0;
-      }
-
-      p {
-        font-weight: 500;
-        font-size: 14px;
-      }
-    }
-  }
-
-  .bottom_div {
-    width: 100%;
-
-    @include flex(row, center, center);
-    button {
-      @include flex(row, center, center, 0.5rem);
-      background-color: #ffffff;
-      padding: 0.5rem 1rem;
-      font-weight: 500;
-      font-size: 16px;
-      // border: 1px solid #7e7e7e;
-      outline: none;
-      border: 0;
-      color: #fff;
-      width: 100%;
-      cursor: pointer;
-
-      span {
-        svg {
-          stroke: #111111 !important;
-        }
-      }
-
-      p {
-        font-weight: 600;
-        color: #111111;
-        font-family: "Poppins", sans-serif;
-      }
-    }
-  }
-}
-
 // FORM CARD STYLES
 
 .form__wrapper {
@@ -165,7 +97,8 @@
 
     .img_wrap {
       height: 85px;
-      width: 22%;
+      width: 85px;
+      flex-shrink: 0;
       overflow: hidden;
       @include flex(row, unset, center);
 
@@ -177,7 +110,7 @@
     }
 
     .heading_wrap {
-      width: 72%;
+      width: 100%;
       line-height: 1.2;
       h4 {
         font-weight: 500;
@@ -226,7 +159,6 @@
       p {
         font-weight: 600;
         color: #111111;
-        font-family: "Poppins", sans-serif;
       }
     }
   }

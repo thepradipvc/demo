@@ -14,10 +14,10 @@ import Template14 from "@/app/templates/template14/page";
 
 export const renderTemplates = (profile: any) => {
   switch (profile?.selected_template) {
-    case "tpl_004":
+    case "tpl_002":
       return <Template14 profile={profile} />;
 
     default:
-      break;
+      return <h1>PROFILE</h1>; // or return a fallback component, error, or null
   }
 };
