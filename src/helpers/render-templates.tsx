@@ -14,7 +14,43 @@ import Template14 from "@/app/templates/template14/page";
 
 export const renderTemplates = (profile: any) => {
   switch (profile?.selected_template) {
+    case "tpl_001":
+      return <Template1 profile={profile} />;
+
     case "tpl_002":
+      return <Template2 profile={profile} />;
+
+    case "tpl_003":
+      return <Template3 profile={profile} />;
+
+    case "tpl_004":
+      return <Template4 profile={profile} />;
+
+    case "tpl_005":
+      return <Template5 profile={profile} />;
+
+    case "tpl_006":
+      return <Template6 profile={profile} />;
+
+    case "tpl_007":
+      return <Template7 profile={profile} />;
+
+    case "tpl_008":
+      return <Template8 profile={profile} />;
+
+    case "tpl_009":
+      return <Template9 profile={profile} />;
+
+    case "tpl_010":
+      return <Template10 profile={profile} />;
+
+    case "tpl_012":
+      return <Template12 profile={profile} />;
+
+    case "tpl_013":
+      return <Template13 profile={profile} />;
+
+    case "tpl_014":
       return <Template14 profile={profile} />;
 
     default:
