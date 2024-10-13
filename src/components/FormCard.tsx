@@ -1,11 +1,12 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Product } from "@/types";
 import { IconExternalLink } from "@tabler/icons-react";
 import Image from "next/image";
 import React from "react";
 import { validateForm } from "@/helpers/validate-form";
 import { useRouter } from "next/navigation";
+import { submitData } from "@/helpers/getData";
 
 interface Props {
   formClasses: {
@@ -22,24 +23,48 @@ interface Props {
 }
 
 function FormCard({ formClasses, product }: Props) {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    mobile: "",
-  });
+  const [formData, setFormData] = useState<{ [key: string]: string }>({});
 
   const router = useRouter();
+
+  useEffect(() => {
+    const fields = product?.form_fields;
+    const initialFormData: { [key: string]: string } = {};
+    fields &&
+      fields.forEach((field) => {
+        initialFormData[field.toLowerCase()] = ""; // Create key from the field in lowercase
+      });
+    setFormData(initialFormData);
+  }, [product]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = () => {
-    if (validateForm(formData)) {
-      console.log("Form submitted:", formData);
+  const handleSubmit = async () => {
+    let productURL = product.redirect_url || product.file_name || "";
+    if (validateForm(formData, product?.form_fields ?? []) === true) {
+      let body = {
+        ...formData,
+        product_id: product?.id,
+      };
+
+      try {
+        let submitResponse = await submitData(body);
+        submitResponse && window.open(productURL?.toString(), "_blank");
+
+        const resetFormData: { [key: string]: string } = {};
+        product?.form_fields &&
+          product?.form_fields.forEach((field) => {
+            resetFormData[field.toLowerCase()] = ""; // Set empty values for each field
+          });
+        setFormData(resetFormData); // Reset the form data with empty fields
+      } catch (error) {
+        console.log("something went wrong", error);
+      }
     } else {
-      console.log("error");
+      console.log("Validation error");
     }
   };
 
@@ -54,25 +79,20 @@ function FormCard({ formClasses, product }: Props) {
       return;
     }
 
-    if (product?.redirect_url) {
-      window.open(product?.redirect_url, "_blank");
-      return;
-    }
-
-    if (product?.file_name) {
-      window.open(product?.file_name, "_blank");
-      return;
-    }
-
-    if (
-      !product?.checkout_page_header_image_base64 &&
-      !product?.checkout_page_description &&
-      !product?.checkout_page_header_image_base64 &&
-      !product?.checkout_button_title
-    ) {
+    if (product?.form_fields && product?.form_fields?.length > 1) {
       handleSubmit();
     }
+
+    // if (
+    //   !product?.checkout_page_header_image_base64 &&
+    //   !product?.checkout_page_description &&
+    //   !product?.checkout_page_header_image_base64 &&
+    //   !product?.checkout_button_title
+    // ) {
+    //   handleSubmit();
+    // }
   };
+
 
   return (
     <div className={formClasses.cardWrapper}>
@@ -97,7 +117,7 @@ function FormCard({ formClasses, product }: Props) {
         </div>
       </div>
 
-      {!product?.checkout_button_title && (
+      {product?.form_fields && product?.form_fields?.length > 0 && (
         <form className={formClasses.middleDiv}>
           {product?.form_fields?.map((field) => (
             <input

@@ -31,6 +31,24 @@ export const getProductData = async (productId: string) => {
   return res.json(); // Fetch will automatically convert it to JSON
 };
 
+export const submitData = async (payload: any) => {
+  const res = await fetch(`https://dev.lnkr.store/api/v1/order`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+    // Revalidate cache for fresh data in case of ISR/SSG
+    next: { revalidate: 10 },
+  });
+
+  if (!res.ok) {
+    throw new Error(`Failed to fetch data: ${res.status}`);
+  }
+
+  return res.json(); // Automatically convert response to JSON
+};
+
 export const getSlotsData = async (
   username: string,
   date: string,

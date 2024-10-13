@@ -1,12 +1,30 @@
-export const validateForm = (formData:any) => {
-    const newErrors: any = {};
-    if (!formData.name) newErrors.name = "Name is required.";
-    if (!formData.email) {
-      newErrors.email = "Email is required.";
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Email format is invalid.";
+export const validateForm = (formData: any, apiFields: string[]) => {
+  console.log(formData, apiFields);
+  
+  const newErrors: any = {};
+
+  // Loop through each field received from the API
+  apiFields.forEach((field) => {
+    const fieldKey = field.toLowerCase(); // Assuming formData uses lowercase field names
+
+    // Validate each field: it should not be undefined, null, or an empty string
+    if (
+      formData[fieldKey] === undefined ||
+      formData[fieldKey] === null ||
+      formData[fieldKey].trim() === ""
+    ) {
+      newErrors[fieldKey] = `${field} is required.`; // Dynamically create error messages
     }
-    if (!formData.mobile) newErrors.mobile = "Mobile number is required.";
-    // setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+
+    // Example additional validation for email fields
+    if (field.toLowerCase() === "email" && formData[fieldKey]) {
+      if (!/\S+@\S+\.\S+/.test(formData[fieldKey])) {
+        newErrors[fieldKey] = "Email format is invalid.";
+      }
+    }
+  });
+  console.log(newErrors);
+  
+
+  return Object.keys(newErrors).length === 0 ? true : newErrors; // Return errors if any exist
+};
