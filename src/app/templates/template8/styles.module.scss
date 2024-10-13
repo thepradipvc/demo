@@ -141,7 +141,7 @@
   .form_bottom_div {
     width: 100%;
 
-    @include flex(row, center, center);
+    @include flex(column, unset, center);
     button {
       @include flex(row, center, space-between, 0.5rem);
       background-color: #027bb5;

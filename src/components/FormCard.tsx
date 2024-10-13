@@ -18,13 +18,14 @@ interface Props {
     bottomDiv: string;
     button: string;
     price: string;
+    errorText?: string; // Add a class for error text styling
   };
   product: Product;
 }
 
 function FormCard({ formClasses, product }: Props) {
   const [formData, setFormData] = useState<{ [key: string]: string }>({});
-
+  const [errorText, setErrorText] = useState<string>(""); // State to track the first validation error
   const router = useRouter();
 
   useEffect(() => {
@@ -44,7 +45,13 @@ function FormCard({ formClasses, product }: Props) {
 
   const handleSubmit = async () => {
     let productURL = product.redirect_url || product.file_name || "";
-    if (validateForm(formData, product?.form_fields ?? []) === true) {
+    const validationResult = validateForm(formData, product?.form_fields ?? []);
+
+    // Check if validationResult is an object with error messages
+    if (typeof validationResult === "object" && validationResult !== null) {
+      const firstErrorKey = Object.keys(validationResult)[0]; // Get the first error field
+      setErrorText(validationResult[firstErrorKey]); // Set the first error message
+    } else if (validationResult === true) {
       let body = {
         ...formData,
         product_id: product?.id,
@@ -60,11 +67,12 @@ function FormCard({ formClasses, product }: Props) {
             resetFormData[field.toLowerCase()] = ""; // Set empty values for each field
           });
         setFormData(resetFormData); // Reset the form data with empty fields
+        setErrorText(""); // Clear any previous errors
       } catch (error) {
         console.log("something went wrong", error);
       }
     } else {
-      console.log("Validation error");
+      setErrorText("An unknown error occurred"); // Handle unexpected validation result
     }
   };
 
@@ -82,17 +90,7 @@ function FormCard({ formClasses, product }: Props) {
     if (product?.form_fields && product?.form_fields?.length > 1) {
       handleSubmit();
     }
-
-    // if (
-    //   !product?.checkout_page_header_image_base64 &&
-    //   !product?.checkout_page_description &&
-    //   !product?.checkout_page_header_image_base64 &&
-    //   !product?.checkout_button_title
-    // ) {
-    //   handleSubmit();
-    // }
   };
-
 
   return (
     <div className={formClasses.cardWrapper}>
@@ -133,6 +131,7 @@ function FormCard({ formClasses, product }: Props) {
       )}
 
       <div className={formClasses.bottomDiv}>
+        {errorText && <span id='errorText'>{errorText}</span>}
         <button onClick={() => clickHandler()}>
           <p>{product?.thumbnail_page_button_title}</p>
           <span>

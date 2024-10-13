@@ -8,6 +8,13 @@
   box-sizing: border-box;
 }
 
+#errorText{
+  font-size: 12px;
+  margin: 0 0 5px 0;
+  color: red;
+}
+
+
 .slick-track {
   display: flex !important;
   height: 500px;
