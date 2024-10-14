@@ -24,7 +24,7 @@ function index() {
         </p>
         <div className="mt-6 flex flex-col sm:flex-row gap-3">
           <a
-            href="https://app.lnkr.store"
+            href="https://app.lnkr.store/auth/register"
             className="btn btn-primary mt-8 bg-black text-white py-4 px-6 rounded-xl font-bold text-center"
             rel="noopener"
           >

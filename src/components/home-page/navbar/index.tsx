@@ -40,7 +40,7 @@ const Navbar = () => {
     <Container>
       <header className="flex flex-col lg:flex-row justify-between items-center my-5">
         <nav className="w-full lg:w-auto flex items-center justify-between">
-          <a href="https://app.lnkr.store/" className="text-lg font-bold text-slate-800">
+          <a href="https://lnkr.store/" className="text-lg font-bold text-slate-800">
             Lnkr. <span className="text-slate-500">Store</span>
           </a>
 
@@ -48,7 +48,7 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center gap-4">
           <a
-            href="https://app.lnkr.store/"
+            href="https://app.lnkr.store/auth/register"
             className="btn btn-primary mt-8 bg-black text-white py-4 px-6 rounded-xl font-bold"
           >
             Get Started
