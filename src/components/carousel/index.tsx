@@ -89,7 +89,7 @@ function index() {
         </div>
 
         <a
-          href="https://app.lnkr.store"
+          href="https://app.lnkr.store/auth/register"
           className="btn btn-primary mt-8 bg-black text-white py-4 px-6 rounded-xl font-bold text-center w-max m-auto"
           rel="noopener"
         >
