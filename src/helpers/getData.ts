@@ -1,3 +1,5 @@
+import { redirect } from "next/navigation";
+
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 export const getData = async (profile: string) => {
   const res = await fetch(`https://dev.lnkr.store/api/v1/profile/${profile}`, {
@@ -6,8 +8,10 @@ export const getData = async (profile: string) => {
   });
 
   if (!res.ok) {
-    window.location.href = "/404";
-    throw new Error(`Failed to fetch data: ${res.status}`);
+    // This wouldn't work as there is no window object in Node.js (server-side)
+    // window.location.href = "/404";
+    // throw new Error(`Failed to fetch data: ${res.status}`);
+    return redirect("/")
   }
 
   return res.json(); // Fetch will automatically convert it to JSON

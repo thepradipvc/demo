@@ -11,7 +11,7 @@ const CallToAction = () => {
       </p>
       <div className="flex mt-5">
         <a
-          href="https://app.lnkr.store"
+          href="https://app.lnkr.store/auth/register"
           className="bg-white text-black px-5 py-2 rounded-lg hover:bg-gray-200 font-bold"
         >
           Get Started

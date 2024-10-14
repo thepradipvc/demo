@@ -6,7 +6,7 @@ import { IconArrowRight } from "@tabler/icons-react/";
 
 function index() {
   return (
-    <a href="https://app.lnkr.store" className={styles.snack_container}>
+    <a href="https://app.lnkr.store/auth/register" className={styles.snack_container}>
       <div>
         <div>
           <Image src={Logo} width={35} height={35} alt="Lnkr" />
