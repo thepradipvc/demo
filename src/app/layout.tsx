@@ -23,8 +23,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           name="description"
           content="Lnkr.store is the perfect link-in-bio solution for creators, enabling you to manage all your links, sell digital products, offer courses, and book 1:1 sessions seamlessly."
         />
-
-        <meta property="og:type" content="website" />
         <meta
           property="og:title"
           content="Lnkr.store - The Ultimate Link-in-Bio Solution"
