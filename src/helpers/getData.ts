@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { redirect } from "next/navigation";
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 export const getData = async (profile: string) => {
@@ -11,7 +11,7 @@ export const getData = async (profile: string) => {
     // This wouldn't work as there is no window object in Node.js (server-side)
     // window.location.href = "/404";
     // throw new Error(`Failed to fetch data: ${res.status}`);
-    return notFound();
+    return redirect("/")
   }
 
   return res.json(); // Fetch will automatically convert it to JSON
