@@ -2,6 +2,7 @@ import React from "react";
 import "./globals.scss";
 import type { Metadata } from "next";
 import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -17,45 +18,41 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
         rel="stylesheet"
       />
-      <Head>
-        <title>Lnkr.store - The Ultimate Link-in-Bio Solution</title>
-        <meta
-          name="description"
-          content="Lnkr.store is the perfect link-in-bio solution for creators, enabling you to manage all your links, sell digital products, offer courses, and book 1:1 sessions seamlessly."
-        />
-        <meta
-          property="og:title"
-          content="Lnkr.store - The Ultimate Link-in-Bio Solution"
-        />
-        <meta
-          property="og:description"
-          content="Lnkr.store is the perfect link-in-bio solution for creators. Manage all your links, sell digital products, offer courses, and book 1:1 sessions seamlessly."
-        />
-        <meta property="og:url" content="https://lnkr.store" />
-        <meta property="og:image" content={"Logo"} />
-        <meta property="og:site_name" content="Lnkr.store" />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Lnkr.store - The Ultimate Link-in-Bio Solution"
-        />
-        <meta
-          name="twitter:description"
-          content="Lnkr.store is the ultimate link-in-bio platform for creators, helping you manage links, sell digital products, host webinars, and offer courses effortlessly."
-        />
-        <meta name="twitter:image" content={"Logo"} />
-        <meta name="twitter:site" content="@lnkrstore" />
-
-        <meta name="robots" content="index, follow" />
-        <meta
-          name="keywords"
-          content="link in bio, digital products, creator tools, course sales, 1:1 sessions, webinars, lnkr.store"
-        />
-        <meta name="author" content="Lnkr.store" />
-
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <NextSeo
+        title="Using More of Config"
+        description="This example uses more of the available config options."
+        canonical="https://www.canonical.ie/"
+        openGraph={{
+          url: "https://www.url.ie/a",
+          title: "Open Graph Title",
+          description: "Open Graph Description",
+          images: [
+            {
+              url: "https://www.example.ie/og-image-01.jpg",
+              width: 800,
+              height: 600,
+              alt: "Og Image Alt",
+              type: "image/jpeg",
+            },
+            {
+              url: "https://www.example.ie/og-image-02.jpg",
+              width: 900,
+              height: 800,
+              alt: "Og Image Alt Second",
+              type: "image/jpeg",
+            },
+            { url: "https://www.example.ie/og-image-03.jpg" },
+            { url: "https://www.example.ie/og-image-04.jpg" },
+          ],
+          siteName: "SiteName",
+        }}
+        twitter={{
+          handle: "@handle",
+          site: "@site",
+          cardType: "summary_large_image",
+        }}
+      />
       <body
         style={{
           fontFamily: "Bricolage Grotesque",
