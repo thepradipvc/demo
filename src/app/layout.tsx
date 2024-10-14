@@ -1,8 +1,52 @@
 import React from "react";
 import "./globals.scss";
 import type { Metadata } from "next";
-import Head from "next/head";
-import { NextSeo } from "next-seo";
+
+export const metadata: Metadata = {
+  title: "Lnkr.store - The Ultimate Link-in-Bio Solution",
+  description:
+    "Lnkr.store is the perfect link-in-bio solution for creators, enabling you to manage all your links, sell digital products, offer courses, and book 1:1 sessions seamlessly.",
+  openGraph: {
+    type: "website",
+    url: "https://lnkr.store",
+    title: "Lnkr.store - The Ultimate Link-in-Bio Solution",
+    description:
+      "Lnkr.store is the perfect link-in-bio solution for creators. Manage all your links, sell digital products, offer courses, and book 1:1 sessions seamlessly.",
+    images: [
+      {
+        url: "/assets/home-page/lnkr.svg",
+        width: 800,
+        height: 600,
+        alt: "Lnkr.store Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lnkr.store - The Ultimate Link-in-Bio Solution",
+    description:
+      "Lnkr.store is the ultimate link-in-bio platform for creators, helping you manage links, sell digital products, host 1:1 sessions, and offer courses effortlessly.",
+    images: ["/assets/home-page/lnkr.svg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  keywords: [
+    "link in bio",
+    "digital products",
+    "creator tools",
+    "course sales",
+    "1:1 sessions",
+    "webinars",
+    "lnkr.store",
+  ],
+  authors: [{ name: "Lnkr.store" }],
+  viewport: "width=device-width, initial-scale=1",
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -17,41 +61,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <link
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
         rel="stylesheet"
-      />
-
-      <NextSeo
-        title="Using More of Config"
-        description="This example uses more of the available config options."
-        canonical="https://www.canonical.ie/"
-        openGraph={{
-          url: "https://www.url.ie/a",
-          title: "Open Graph Title",
-          description: "Open Graph Description",
-          images: [
-            {
-              url: "https://www.example.ie/og-image-01.jpg",
-              width: 800,
-              height: 600,
-              alt: "Og Image Alt",
-              type: "image/jpeg",
-            },
-            {
-              url: "https://www.example.ie/og-image-02.jpg",
-              width: 900,
-              height: 800,
-              alt: "Og Image Alt Second",
-              type: "image/jpeg",
-            },
-            { url: "https://www.example.ie/og-image-03.jpg" },
-            { url: "https://www.example.ie/og-image-04.jpg" },
-          ],
-          siteName: "SiteName",
-        }}
-        twitter={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
-        }}
       />
       <body
         style={{
