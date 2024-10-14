@@ -1,11 +1,12 @@
 import React from "react";
 import "./globals.scss";
 import Logo from "../assets/home-page/lnkr.svg";
+import Head from "next/head";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html>
-      <head>
+      <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -58,7 +59,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <link rel="icon" href="/favicon.ico" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
+      </Head>
       <body
         style={{
           fontFamily: "Bricolage Grotesque",
