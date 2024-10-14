@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       "Lnkr.store is the perfect link-in-bio solution for creators. Manage all your links, sell digital products, offer courses, and book 1:1 sessions seamlessly.",
     images: [
       {
-        url: "/assets/home-page/lnkr.svg",
+        url: "https://gratisography.com/wp-content/uploads/2024/03/gratisography-funflower-800x525.jpg",
         width: 800,
         height: 600,
         alt: "Lnkr.store Logo",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Lnkr.store - The Ultimate Link-in-Bio Solution",
     description:
       "Lnkr.store is the ultimate link-in-bio platform for creators, helping you manage links, sell digital products, host 1:1 sessions, and offer courses effortlessly.",
-    images: ["/assets/home-page/lnkr.svg"],
+    images: "https://gratisography.com/wp-content/uploads/2024/03/gratisography-funflower-800x525.jpg",
   },
   robots: {
     index: true,
