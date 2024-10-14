@@ -1,12 +1,61 @@
 import React from "react";
 import "./globals.scss";
-import Logo from "../assets/home-page/lnkr.svg";
-import Head from "next/head";
+import type { Metadata } from 'next';
+
+
+export const metadata: Metadata = {
+  title: 'Lnkr.store - The Ultimate Link-in-Bio Solution',
+  description:
+    'Lnkr.store is the perfect link-in-bio solution for creators, enabling you to manage all your links, sell digital products, offer courses, and book 1:1 sessions seamlessly.',
+  openGraph: {
+    type: 'website',
+    url: 'https://lnkr.store',
+    title: 'Lnkr.store - The Ultimate Link-in-Bio Solution',
+    description:
+      'Lnkr.store is the perfect link-in-bio solution for creators. Manage all your links, sell digital products, offer courses, and book 1:1 sessions seamlessly.',
+    images: [
+      {
+        url: '/assets/home-page/lnkr.svg',
+        width: 800,
+        height: 600,
+        alt: 'Lnkr.store Logo',
+      },
+    ],
+    siteName: 'Lnkr.store',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Lnkr.store - The Ultimate Link-in-Bio Solution',
+    description:
+      'Lnkr.store is the ultimate link-in-bio platform for creators, helping you manage links, sell digital products, host 1:1 sessions, and offer courses effortlessly.',
+    images: ['/assets/home-page/lnkr.svg'],
+    site: '@lnkrstore',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  keywords: [
+    'link in bio',
+    'digital products',
+    'creator tools',
+    'course sales',
+    '1:1 sessions',
+    'webinars',
+    'lnkr.store',
+  ],
+  authors: [{ name: 'Lnkr.store' }],
+  viewport: 'width=device-width, initial-scale=1',
+  icons: {
+    icon: '/favicon.ico',
+  },
+};
+
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html>
-      <Head>
+      <>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -18,48 +67,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
           rel="stylesheet"
         />
-        <title>Lnkr.store - The Ultimate Link-in-Bio Solution</title>
-        <meta
-          name="description"
-          content="Lnkr.store is the perfect link-in-bio solution for creators, enabling you to manage all your links, sell digital products, offer courses, and book 1:1 sessions seamlessly."
-        />
-
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Lnkr.store - The Ultimate Link-in-Bio Solution"
-        />
-        <meta
-          property="og:description"
-          content="Lnkr.store is the perfect link-in-bio solution for creators. Manage all your links, sell digital products, offer courses, and book 1:1 sessions seamlessly."
-        />
-        <meta property="og:url" content="https://lnkr.store" />
-        <meta property="og:image" content={Logo} />
-        <meta property="og:site_name" content="Lnkr.store" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Lnkr.store - The Ultimate Link-in-Bio Solution"
-        />
-        <meta
-          name="twitter:description"
-          content="Lnkr.store is the ultimate link-in-bio platform for creators, helping you manage links, sell digital products, host webinars, and offer courses effortlessly."
-        />
-        <meta name="twitter:image" content={Logo} />
-        <meta name="twitter:site" content="@lnkrstore" />
-
-        <meta name="robots" content="index, follow" />
-        <meta
-          name="keywords"
-          content="link in bio, digital products, creator tools, course sales, 1:1 sessions, webinars, lnkr.store"
-        />
-        <meta name="author" content="Lnkr.store" />
-
-        <link rel="icon" href="/favicon.ico" />
-
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+      </>
       <body
         style={{
           fontFamily: "Bricolage Grotesque",
