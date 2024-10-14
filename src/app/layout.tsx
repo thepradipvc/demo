@@ -21,7 +21,6 @@ export const metadata: Metadata = {
         alt: 'Lnkr.store Logo',
       },
     ],
-    siteName: 'Lnkr.store',
   },
   twitter: {
     card: 'summary_large_image',
@@ -29,7 +28,6 @@ export const metadata: Metadata = {
     description:
       'Lnkr.store is the ultimate link-in-bio platform for creators, helping you manage links, sell digital products, host 1:1 sessions, and offer courses effortlessly.',
     images: ['/assets/home-page/lnkr.svg'],
-    site: '@lnkrstore',
   },
   robots: {
     index: true,
