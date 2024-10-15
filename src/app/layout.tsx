@@ -52,19 +52,6 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          // @ts-ignore
-          crossOrigin={true}
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body
         style={{
           fontFamily: "Bricolage Grotesque",

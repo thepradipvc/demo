@@ -13,8 +13,6 @@ import Template13 from "@/app/templates/template13/page";
 import Template14 from "@/app/templates/template14/page";
 
 export const renderTemplates = (profile: any) => {
-  console.log(profile?.selected_template);
-  
   switch (profile?.selected_template) {
     case "tpl_001":
       return <Template1 profile={profile} />;
@@ -56,6 +54,6 @@ export const renderTemplates = (profile: any) => {
       return <Template14 profile={profile} />;
 
     default:
-      return <Template2 profile={profile} />;; // or return a fallback component, error, or null
+      return <Template2 profile={profile} />; // or return a fallback component, error, or null
   }
 };
