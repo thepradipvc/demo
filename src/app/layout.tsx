@@ -26,7 +26,8 @@ export const metadata: Metadata = {
     title: "Lnkr.store - The Ultimate Link-in-Bio Solution",
     description:
       "Lnkr.store is the ultimate link-in-bio platform for creators, helping you manage links, sell digital products, host 1:1 sessions, and offer courses effortlessly.",
-    images: "https://gratisography.com/wp-content/uploads/2024/03/gratisography-funflower-800x525.jpg",
+    images:
+      "https://gratisography.com/wp-content/uploads/2024/03/gratisography-funflower-800x525.jpg",
   },
   robots: {
     index: true,
@@ -51,17 +52,19 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        // @ts-ignore
-        crossOrigin={true}
-      />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
-        rel="stylesheet"
-      />
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          // @ts-ignore
+          crossOrigin={true}
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body
         style={{
           fontFamily: "Bricolage Grotesque",
