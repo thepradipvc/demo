@@ -7,11 +7,13 @@ export default async function ProfilePage({
 }: {
   params: { profile: string };
 }) {
-  let excluded_routes = ["refund-policy", "privacy-policy", "terms-and-conditions"];
+  let excluded_routes = [
+    "refund-policy",
+    "privacy-policy",
+    "terms-and-conditions",
+  ];
 
   if (!excluded_routes?.includes(params?.profile)) {
-    console.log('test');
-    
     let profile = await getData(params?.profile);
     return <div>{renderTemplates(profile)}</div>;
   }
