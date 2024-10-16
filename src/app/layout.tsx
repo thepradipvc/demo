@@ -11,23 +11,13 @@ export const metadata: Metadata = {
     url: "https://lnkr.store",
     title: "Lnkr.store - The Ultimate Link-in-Bio Solution",
     description:
-      "Lnkr.store is the perfect link-in-bio solution for creators. Manage all your links, sell digital products, offer courses, and book 1:1 sessions seamlessly.",
-    images: [
-      {
-        url: "https://gratisography.com/wp-content/uploads/2024/03/gratisography-funflower-800x525.jpg",
-        width: 800,
-        height: 600,
-        alt: "Lnkr.store Logo",
-      },
-    ],
+      "Lnkr.store is the perfect link-in-bio solution for creators. Manage all your links, sell digital products, offer courses, and book 1:1 sessions seamlessly."
   },
   twitter: {
     card: "summary_large_image",
     title: "Lnkr.store - The Ultimate Link-in-Bio Solution",
     description:
       "Lnkr.store is the ultimate link-in-bio platform for creators, helping you manage links, sell digital products, host 1:1 sessions, and offer courses effortlessly.",
-    images:
-      "https://gratisography.com/wp-content/uploads/2024/03/gratisography-funflower-800x525.jpg",
   },
   robots: {
     index: true,
